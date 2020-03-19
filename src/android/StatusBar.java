@@ -249,20 +249,19 @@ public class StatusBar extends CordovaPlugin {
                 View decorView = cordova.getActivity().getWindow().getDecorView();
                 int uiOptions = decorView.getSystemUiVisibility();
 
-                String[] darkContentStyles = {
-                    "default",
-                };
+//                 String[] darkContentStyles = {};
 
                 String[] lightContentStyles = {
+                    "default",
                     "lightcontent",
                     "blacktranslucent",
                     "blackopaque",
                 };
 
-                if (Arrays.asList(darkContentStyles).contains(style.toLowerCase())) {
-                    decorView.setSystemUiVisibility(uiOptions | View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
-                    return;
-                }
+//                 if (Arrays.asList(darkContentStyles).contains(style.toLowerCase())) {
+//                     decorView.setSystemUiVisibility(uiOptions | View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
+//                     return;
+//                 }
 
                 if (Arrays.asList(lightContentStyles).contains(style.toLowerCase())) {
                     decorView.setSystemUiVisibility(uiOptions & ~View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
